@@ -16,10 +16,23 @@
 ))
 #let (init, slides, touying-outline, alert, speaker-note) = utils.methods(s)
 
+#let nontight(lst) = {
+  let fields = lst.fields()
+  fields.remove("children")
+  fields.tight = false
+  return (lst.func())(..fields, ..lst.children)
+}
+
+#show list.where(tight: true): nontight
+#show enum.where(tight: true): nontight
+#show terms.where(tight: true): nontight
+
 
 #set text(font: "Fira Sans", weight: "regular",  size: 20pt)
 #show math.equation: set text(font: "Fira Math")
 #set strong(delta: 500)
 #set par(justify: true)
+
+
 
 #let (slide, empty-slide, title-slide, new-section-slide, focus-slide) = utils.slides(s)
