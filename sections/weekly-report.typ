@@ -111,6 +111,18 @@
 - Encapsulate the part of LLM
 - Implemente text conversion from PDF to Markdown#footnote[https://github.com/VikParuchuri/marker]
 
+== Nov 8, 2024
+=== Prompt
+- The prompt structure
+- Experimental strategy
+  - One agent with/without reasoning process
+  - In some labels, the current reasoning process does not work well
+- Muti-agent recursive reasoning
+  - Reasoning process
+  - Refining the Doc
+- Muti-agent voting strategy 
+
+
 #focus-slide[
   Question?
 ]
